@@ -23,4 +23,4 @@ notifications:
     on_failure: always # default: always
 
 script:
-  - ./gradlew buildCore
+  - ./gradlew buildCoreWhoDoesNotExist
