@@ -1,0 +1,23 @@
+language: java
+
+before_install:
+  - gradle wrapper
+  - chmod +x gradlew
+
+matrix:
+  include:
+    - jdk: openjdk11
+      os: linux
+  allow_failures:
+    - jdk: openjdk8
+      os: osx
+
+git:
+  depth: false
+
+notifications:
+  email:
+    recipients:
+      - s4svfier@uni-trier.de
+    on_success: always # default: change
+    on_failure: always # default: always
